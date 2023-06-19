@@ -20,13 +20,8 @@ class BankAccount {
 
   // Here's a private method to get the current date
   getDate() {
-    var date = require('moment');
-    // var date = moment();
-
-    // var currentDate = date.format('DD/MM/YYYY');
-    var currentDate = date.toString();
-    console.log(currentDate);
-    return currentDate
+    let date = new Date().toLocaleDateString();
+    return date
   }
 }
 
