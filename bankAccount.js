@@ -1,23 +1,18 @@
 class BankAccount {
   constructor() {
-    // Do we want anything in the constructor?
-    // Do we want to pass anything to the bank class when initialising? 
+    // Do we want anything else in the constructor?
+    // -> Probably three variables initialised at 0, balance, credit and debit
+    // Do we want to pass anything to the bank class when initialising? -> Probably not?
     this.date = ""
   }
 
-  getDate() {
-    this.date = new Date().toLocaleDateString();
-    // return this.date
-  }
-
-  // Both the methods should use the getDate() method to get the date
-
+  // Both the deposit and the withdraw methods should use the getDate() method to get the date
   deposit() {
     return this.date
   }
 
   withdraw() {
-
+    return this.date
   }
 
   printStatement() {
@@ -25,6 +20,10 @@ class BankAccount {
     // date || credit || debit || balance
     // then each transaction in a list after that, in reverse chronological order. 
     console.log("date || credit || debit || balance")
+  }
+
+  getDate() {
+    this.date = new Date().toLocaleDateString();
   }
 
 }
