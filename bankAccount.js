@@ -5,19 +5,19 @@ class BankAccount {
     this.date = new Date().toLocaleDateString();
     this.array_of_transactions = []
     this.balance = 0
-    this.credit = 0
-    this.debit = 0
   }
 
   // Both the deposit and the withdraw methods should use the getDate() method to get the date
   deposit(amount) {
-    console.log(this.date)
+    this.balance += amount
     this.array_of_transactions.push(`${this.date}|| ${amount} || || ${this.balance} \n`)
+    console.log(this.array_of_transactions)
   }
 
   withdraw(amount) {
-    console.log(this.date)
+    this.balance -= amount
     this.array_of_transactions.push(`${this.date}|| || ${amount} || ${this.balance} \n`)
+    console.log(this.array_of_transactions)
   }
 
   printStatement() {
@@ -25,20 +25,17 @@ class BankAccount {
     // then each transaction in a list after that, in reverse chronological order. 
     const title = "date || credit || debit || balance\n"
     // this.array_of_transactions.push(title)
-    console.log(this.array_of_transactions)
     this.array_of_transactions.reverse();
     this.array_of_transactions.unshift(title);
+    console.log(this.array_of_transactions);
   }
-
-
 }
 
 module.exports = BankAccount
 
 const newBankAccount = new BankAccount
-
 newBankAccount.printStatement()
 
-newBankAccount.getDate()
+
 // newBankAccount.deposit()
 // newBankAccount.withdraw()
