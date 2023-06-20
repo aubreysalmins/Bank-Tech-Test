@@ -10,25 +10,26 @@ class BankAccount {
   // Both the deposit and the withdraw methods should use the getDate() method to get the date
   deposit(amount) {
     this.balance += amount
-    this.array_of_transactions.push(`${this.date}|| ${amount} || || ${this.balance} \n`)
+    this.array_of_transactions.push(`${this.date}|| ${amount} || || ${this.balance}`)
     // console.log(this.array_of_transactions)
   }
 
   withdraw(amount) {
     this.balance -= amount
-    this.array_of_transactions.push(`${this.date}|| || ${amount} || ${this.balance} \n`)
+    this.array_of_transactions.push(`${this.date}|| || ${amount} || ${this.balance}`)
     // console.log(this.array_of_transactions)
   }
 
   printStatement() {
-    // This is going to return a statement, which will include the title
-    // then each transaction in a list after that, in reverse chronological order. 
-    const title = "date || credit || debit || balance\n"
+    // const title = "date || credit || debit || balance\n"
     // console.log(this.array_of_transactions);
+    const title = "date || credit || debit || balance"
     this.array_of_transactions.reverse();
-    this.array_of_transactions.unshift(title);
-    console.log(this.array_of_transactions);
-
+    // console.log(this.array_of_transactions);
+    this.array_of_transactions.unshift(title)
+    this.array_of_transactions.map((transaction) => {
+      console.log(transaction)
+    })
   }
 }
 
@@ -40,4 +41,6 @@ const newBankAccount = new BankAccount
 
 newBankAccount.deposit(1000)
 newBankAccount.withdraw(500)
+newBankAccount.deposit(2000)
+newBankAccount.withdraw(1000)
 newBankAccount.printStatement()
