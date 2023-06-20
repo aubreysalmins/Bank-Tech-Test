@@ -2,7 +2,7 @@ const Transactions = require('./transactions')
 
 class Statement {
   constructor() {
-    this.date = new Date().toLocaleDateString();
+
   }
 
   print() {
@@ -13,11 +13,6 @@ class Statement {
     this.array_of_transactions.push(title)
     console.log(this.array_of_transactions)
 
-  }
-
-
-  getDate() {
-    this.date = new Date().toLocaleDateString();
   }
 
 }
