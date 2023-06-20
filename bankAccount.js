@@ -37,7 +37,6 @@ class BankAccount {
 module.exports = BankAccount
 
 const newBankAccount = new BankAccount
-// console.log(newBankAccount.getDate())
 
 newBankAccount.printStatement()
 
