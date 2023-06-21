@@ -4,23 +4,18 @@ class Transactions {
   constructor() {
     this.date = new Date().toLocaleDateString();
     this.balance = 0
-    this.credit = 0
-    this.debit = 0
+    this.array_of_transactions = []
   }
 
   deposit(amount) {
     this.balance += amount
-
-    return console.log(this.date)
+    this.array_of_transactions.push(`${this.date}|| ${amount} || || ${this.balance}`)
   }
 
   withdraw(amount) {
     this.balance -= amount
-    return console.log(this.date)
+    this.array_of_transactions.push(`${this.date}|| || ${amount} || ${this.balance}`)
   }
-
-
-
 }
 
 module.exports = Transactions

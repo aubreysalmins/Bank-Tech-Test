@@ -1,20 +1,28 @@
 const Transactions = require('./transactions')
 
 class Statement {
-  constructor() {
-
+  constructor(transactions) {
+    this.array_of_transactions = transactions
   }
 
   print() {
-    // This is going to return a statement, which will include the heading of 
-    // date || credit || debit || balance
-    // then each transaction in a list after that, in reverse chronological order. 
     const title = "date || credit || debit || balance"
-    this.array_of_transactions.push(title)
-    console.log(this.array_of_transactions)
-
+    this.array_of_transactions.reverse();
+    this.array_of_transactions.unshift(title)
+    this.array_of_transactions.map((transaction) => {
+      console.log(transaction)
+    })
   }
-
 }
 
 module.exports = Statement
+
+
+const transactions = new Transactions
+transactions.deposit(10000)
+transactions.withdraw(5000)
+transactions.withdraw(500)
+transactions.withdraw(500)
+
+const statement = new Statement(transactions.array_of_transactions)
+statement.print()
