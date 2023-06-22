@@ -17,7 +17,6 @@ class Statement {
 
 module.exports = Statement
 
-
 const transactions = new Transactions
 transactions.deposit(10000)
 transactions.withdraw(5000)

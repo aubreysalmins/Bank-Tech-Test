@@ -1,4 +1,4 @@
-const Statement = require('./statement')
+// const Statement = require('./statement')
 
 class Transactions {
   constructor() {
@@ -9,12 +9,14 @@ class Transactions {
 
   deposit(amount) {
     this.balance += amount
-    this.array_of_transactions.push(`${this.date}|| ${amount} || || ${this.balance}`)
+    this.array_of_transactions.push(`${this.date} || ${amount} || || ${this.balance}`)
+    return this.array_of_transactions
   }
 
   withdraw(amount) {
     this.balance -= amount
-    this.array_of_transactions.push(`${this.date}|| || ${amount} || ${this.balance}`)
+    this.array_of_transactions.push(`${this.date} || || ${amount} || ${this.balance}`)
+    return this.array_of_transactions
   }
 }
 
