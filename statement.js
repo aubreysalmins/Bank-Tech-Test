@@ -17,11 +17,11 @@ class Statement {
 
 module.exports = Statement
 
-const transactions = new Transactions
-transactions.deposit(10000)
-transactions.withdraw(5000)
-transactions.withdraw(500)
-transactions.withdraw(500)
+// const transactions = new Transactions
+// transactions.deposit(10000)
+// transactions.withdraw(5000)
+// transactions.withdraw(500)
+// transactions.withdraw(500)
 
-const statement = new Statement(transactions.array_of_transactions)
-statement.print()
+// const statement = new Statement(transactions.array_of_transactions)
+// statement.print()
