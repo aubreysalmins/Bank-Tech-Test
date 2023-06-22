@@ -1,3 +1,5 @@
+// const Statement = require('./statement')
+
 class Transactions {
   constructor() {
     this.date = new Date().toLocaleDateString(); // Current date in local format
