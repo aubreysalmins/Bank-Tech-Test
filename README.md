@@ -1,5 +1,7 @@
 Here is a tech test wherein I fulfil the following requirements:
 
+I started with one class, and after realising that there were two separate requirements I split that class into two. 
+
 ## Specification
 
 ### Requirements
